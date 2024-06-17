@@ -34,9 +34,16 @@ const getErrorMessage = () => {
     })
 }
 
+
 const getPersonalHelloMessage = () => {
-  //Complete the fetch that sends a request for a personal message
-  // fetch('http://localhost:8080/hello/YourName')
+  const random_name = 'dan'
+  fetch(`http://localhost:8080/hello?name=${random_name}`)
+  .then(response => response.text()).then(data => {
+      const greeting = document.createElement('p')
+      greeting.innerText = `The server said: ${data}`
+      helloDiv!.appendChild(greeting)
+    })
+    .catch(error => console.log('there was an error:', error))
 }
 
 const postProfileMessage = () => {

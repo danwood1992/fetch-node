@@ -2,22 +2,23 @@
 <html>
     <head>
         <title>The fetch with node example!</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+   
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="build/index.js" defer></script>
     </head>
     <body>
-      <div id="centreColumn">
+      <div class="container col flex"id="centreColumn">
         <div id="hello-div">
-          <button id="hello-button">Get hello!</button>
-          <button id="error-button">Get an error!</button>
+          <button class="btn btn-success"id="hello-button">Get hello!</button>
+          <button  class="btn btn-danger"id="error-button">Get an error!</button>
           <p>
             <span id="responseSpan">Response:</span>
             <span id="responseText">N/A</span>
           </p>
         <div>
         <div>
-          <button id="param-button">Hello person with params</button>
-          <button id="post-button">Post a person</button>
+          <button class="btn btn-primary" id="param-button">Hello person with params</button>
+          <button class="btn btn-secondary" id="post-button">Post a person</button>
         </div>
       </div>
     </body>
